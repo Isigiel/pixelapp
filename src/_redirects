@@ -1,0 +1,4 @@
+/  /en   302  Country=en
+/  /de   302  Country=de
+/de/*    /de/index.html   200
+/en/*    /en/index.html   200

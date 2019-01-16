@@ -1,5 +1,5 @@
 import {BrowserModule, DomSanitizer} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {Inject, LOCALE_ID, NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -55,9 +55,9 @@ import {InstallPromptService} from './services/install-prompt.service';
 export class AppModule {
   constructor(san: DomSanitizer, registry: MatIconRegistry, private updates: SwUpdate,
               private snackBar: MatSnackBar,
-              private promptService: InstallPromptService) {
+              private promptService: InstallPromptService, @Inject(LOCALE_ID)locale) {
     registry.addSvgIconSet(san.bypassSecurityTrustResourceUrl('/assets/icons/set.svg'));
-    moment.locale('de');
+    moment.locale(locale.includes('de') ? 'de' : 'en');
 
     window.addEventListener('beforeinstallprompt', e => {
       // Prevent Chrome 67 and earlier from automatically showing the prompt
@@ -67,8 +67,8 @@ export class AppModule {
     this.updates.available.subscribe(() => {
       this.snackBar
         .open(
-          'Eine neue Version dieser Anwendung ist verfuegbar',
-          'Jetzt laden'
+          locale.includes('de') ? 'Eine neue Version dieser Anwendung ist verfuegbar' : 'A new version of this app is available',
+          locale.includes('de') ? 'Jetzt laden' : 'Update now'
         )
         .afterDismissed()
         .subscribe(({dismissedByAction}) => {

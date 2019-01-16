@@ -17,7 +17,7 @@
       <button mat-icon-button disabled>
         <mat-icon svgIcon="left"></mat-icon>
       </button>
-      <h1 class="mat-display-2">2019</h1>
+      <h1 class="mat-display-2">{{displayYear$ | async}}</h1>
       <button mat-icon-button disabled>
         <mat-icon svgIcon="right"></mat-icon>
       </button>
@@ -28,14 +28,15 @@
       <div fxFlex="90" fxLayout="column" fxLayoutGap="1rem">
         <p>Hier kannst du sehen, wie {{currentYear}} war.</p>
         <app-display-year [data]="yearData$|async" [year]="displayYear$|async"></app-display-year>
-        <p *ngIf="fabDisabled$ | async">Du kannst morgen wieder deine Stimmung speichern</p>
+        <p *ngIf="fabDisabled$ | async" i18n>Du kannst morgen wieder deine Stimmung speichern</p>
       </div>
     </div>
   </ng-container>
   <ng-template #empty>
     <img src="/assets/illustrations/empty.svg" alt="List is empty">
     <div fxLayout="row" fxLayoutAlign="center">
-      <p fxFlex="80">Sieht so aus, also ob du noch nichts eingetragen hast. Fuege deinen ersten Tag hinzu!</p>
+      <p fxFlex="80" i18n="Text is displayed if the selected year has no data recorded">Sieht so aus, also ob du noch
+        nichts eingetragen hast. Fuege deinen ersten Tag hinzu!</p>
     </div>
   </ng-template>
 </div>

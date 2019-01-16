@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="9aee5fbc092248cced1dfb621d5d9ac4ba4c31d7" datatype="html">
+        <source>Willkommen 👋🏼</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a7dcc2439b168bcd5825bb15270c863ef12241aa" datatype="html">
+        <source>Was ist das?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b7eb0a5395e7537f9a04460ca9bc24867e919f7e" datatype="html">
+        <source>Hier kannst du deine Stimmung ueber da Jahr hinweg einfach tracken.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="96467c7e712cdf0b48c7ea7eb800b4d5febdc529" datatype="html">
+        <source>Und meine Daten?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="55c9ae1286d99fcf013630e36b2d61841aefa4d9" datatype="html">
+        <source>Die Daten werden nur auf diesem Gereat gespeichert und nie hochgeladen.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="26ef4c1133216490aa650d38a182f910ae2f231a" datatype="html">
+        <source>Warum?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f6c0387750993212f3d4de4492daf584b47cc2c2" datatype="html">
+        <source>Ich habe von dieser Technik gelesen aber keine App gefunden, die mir gefallen hat. ALso hab ich mich mal
+        hingesetzt und als Uebung selbst eine geschrieben.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="db9574dd7c727962a979246b2902630ec7fd2de9" datatype="html">
+        <source>Gibt es das als App?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="baf2bbe5f3c2d20c81fdbab632058fed29ef5aaa" datatype="html">
+        <source>Falls dein Handy monderne APps unterstuetzt sollte in der Leiste oben ein download icon sichtbar werden. Damit
+        kannst du die app auf deinem Handy installieren.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6f689efe20b2e1308dc0e3d0aaef6153e04f7abb" datatype="html">
+        <source>Alles klar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="395228727b0823df16e07ee3adb366a9afedd9ab" datatype="html">
+        <source>Neuer Eintrag ✨</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/new-entry/new-entry.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e55a57e5e24146db415dd2b1e057c05de4914a1a" datatype="html">
+        <source>Wie gut hast du dich heute gefuehlt?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/new-entry/new-entry.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ae6edb4e69324702f5323524352106f7d33ef9df" datatype="html">
+        <source>Ganz schlecht</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/new-entry/new-entry.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ba740d7db2271319230340f602a3eb08b8de68af" datatype="html">
+        <source>Super gut</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/new-entry/new-entry.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="actionSave" datatype="html">
+        <source>Speichern</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/new-entry/new-entry.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="actionCancel" datatype="html">
+        <source>Abbrechen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/new-entry/new-entry.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3af84d8f582a3f1b28047b875812d1401ccac2cf" datatype="html">
+        <source>Du kannst morgen wieder deine Stimmung speichern</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3d73730ed258bfff98d4601de0ded2acc33e62f7" datatype="html">
+        <source>Sieht so aus, also ob du noch
+        nichts eingetragen hast. Fuege deinen ersten Tag hinzu!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">Text is displayed if the selected year has no data recorded</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
