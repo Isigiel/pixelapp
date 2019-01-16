@@ -1,0 +1,9 @@
+<div fxLayout="column" fxLayoutGap="1px">
+  <div fxLayout="row" *ngFor="let month of displayData | async">
+    <span fxFlex="50px">{{month.month}}</span>
+    <div fxFlex gdAuto gdColumns="repeat(16, 1fr)" gdGap="1px">
+      <div *ngFor="let day of month.days" class="cell mood-{{day.mood}}">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.cell {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &.mood-0 {
+    background: #E0E0E0;
+  }
+  &.mood-1 {
+    background: #E57373;
+  }
+  &.mood-2 {
+    background: #E0E0E0;
+  }
+  &.mood-3 {
+    background: #64B5F6;
+  }
+  &.mood-4 {
+    background: #E0E0E0;
+  }
+  &.mood-5 {
+    background: #BA68C8;
+  }
+}

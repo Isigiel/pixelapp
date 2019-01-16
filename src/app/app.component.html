@@ -4,12 +4,12 @@
     <mat-icon svgIcon="help"></mat-icon>
   </button>
 </mat-toolbar>
-<button mat-fab (click)="newEntry()">
+<button mat-fab (click)="newEntry()" [disabled]="fabDisabled | async">
   <mat-icon svgIcon="add"></mat-icon>
 </button>
-<div fxLayout="column" fxLayoutGap="1rem">
+<div fxLayout="column" fxLayoutGap="2rem">
   <mat-toolbar class="spacer"></mat-toolbar>
-  <div fxLayout="row" fxLayoutAlign="center">
+  <div fxLayout="row" fxLayoutAlign="center center">
     <div fxFlex="90" fxLayout="row" fxLayoutAlign="space-between">
       <button mat-icon-button disabled>
         <mat-icon svgIcon="left"></mat-icon>
@@ -20,8 +20,19 @@
       </button>
     </div>
   </div>
-  <img src="/assets/illustrations/empty.svg" alt="List is empty">
-  <div fxLayout="row" fxLayoutAlign="center">
-    <p fxFlex="80">Sieht so aus, also ob du noch nichts eingetragen hast. Fuege deinen ersten Tag hinzu!</p>
-  </div>
+  <ng-container *ngIf="yearData | async; else empty">
+    <div fxLayout="row" fxLayoutAlign="center">
+      <div fxFlex="90" fxLayout="column" fxLayoutGap="1rem">
+        <p>Hier kannst du sehen, wie {{currentYear}} war.</p>
+        <app-display-year [data]="yearData|async" [year]="displayYear|async"></app-display-year>
+        <p *ngIf="fabDisabled | async">Du kannst morgen wieder deine Stimmung speichern</p>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #empty>
+    <img src="/assets/illustrations/empty.svg" alt="List is empty">
+    <div fxLayout="row" fxLayoutAlign="center">
+      <p fxFlex="80">Sieht so aus, also ob du noch nichts eingetragen hast. Fuege deinen ersten Tag hinzu!</p>
+    </div>
+  </ng-template>
 </div>

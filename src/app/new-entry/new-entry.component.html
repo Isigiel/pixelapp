@@ -3,20 +3,22 @@
   <img src="/assets/illustrations/chill.svg" alt="Welcome">
   <!--<h1>Fuer den </h1>-->
   <p>Wie gut hast du dich heute gefuehlt?</p>
-  <mat-slider min="1" max="5" step="1" value="3"></mat-slider>
-  <div fxLayout="row" fxLayoutAlign="space-between">
+  <mat-slider min="1" max="5" step="1" [formControl]="moodCtrl"></mat-slider>
+  <div fxLayout="column" fxLayoutGap=".25rem" class="has-margin-bottom">
+    <div fxLayout="row" fxLayoutAlign="space-between">
       <mat-icon svgIcon="crying"></mat-icon>
       <mat-icon svgIcon="sad"></mat-icon>
       <mat-icon svgIcon="neutral"></mat-icon>
       <mat-icon svgIcon="happy"></mat-icon>
       <mat-icon svgIcon="lol"></mat-icon>
-  </div>
-  <div fxLayout="row" fxLayoutAlign="space-between">
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between">
       <span>Ganz schlecht</span>
-      <span>Sehr gut</span>
+      <span>Super gut</span>
+    </div>
   </div>
 </div>
 <div mat-dialog-actions fxLayout="row" fxLayoutAlign="end" fxLayoutGap=".5rem">
-  <button mat-stroked-button mat-dialog-close color="primary">Speichern</button>
+  <button mat-stroked-button [mat-dialog-close]="moodCtrl.value" color="primary">Speichern</button>
   <button mat-stroked-button mat-dialog-close>Abbrechen</button>
 </div>

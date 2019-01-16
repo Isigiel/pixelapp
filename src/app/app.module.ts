@@ -8,17 +8,23 @@ import {MatButtonModule, MatDialogModule, MatIconModule, MatIconRegistry, MatSli
 import {HttpClientModule} from '@angular/common/http';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AboutComponent} from './about/about.component';
-import { NewEntryComponent } from './new-entry/new-entry.component';
+import {NewEntryComponent} from './new-entry/new-entry.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {DIsplayYearComponent} from './display-year/display-year.component';
+import * as moment from 'moment';
+import 'moment/locale/de';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    NewEntryComponent
+    NewEntryComponent,
+    DIsplayYearComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatIconModule,
     MatToolbarModule,
@@ -35,5 +41,6 @@ import { NewEntryComponent } from './new-entry/new-entry.component';
 export class AppModule {
   constructor(san: DomSanitizer, registry: MatIconRegistry) {
     registry.addSvgIconSet(san.bypassSecurityTrustResourceUrl('/assets/icons/set.svg'));
+    moment.locale('de');
   }
 }

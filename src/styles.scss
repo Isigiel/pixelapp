@@ -35,3 +35,7 @@ $pixelday-dark-theme: mat-dark-theme($pixelday-primary, $pixelday-accent, $pixel
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.has-margin-bottom{
+  margin-bottom: 1rem;
+}
