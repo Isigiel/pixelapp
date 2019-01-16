@@ -56,7 +56,7 @@ export class AppModule {
   constructor(san: DomSanitizer, registry: MatIconRegistry, private updates: SwUpdate,
               private snackBar: MatSnackBar,
               private promptService: InstallPromptService, @Inject(LOCALE_ID)locale) {
-    registry.addSvgIconSet(san.bypassSecurityTrustResourceUrl('/assets/icons/set.svg'));
+    registry.addSvgIconSet(san.bypassSecurityTrustResourceUrl('assets/icons/set.svg'));
     moment.locale(locale.includes('de') ? 'de' : 'en');
 
     window.addEventListener('beforeinstallprompt', e => {
