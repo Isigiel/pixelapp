@@ -15,4 +15,8 @@ export class NewEntryComponent implements OnInit {
   ngOnInit() {
   }
 
+  setMood(mood: number) {
+    this.moodCtrl.setValue(mood);
+  }
+
 }

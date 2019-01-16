@@ -6,11 +6,11 @@
   <mat-slider min="1" max="5" step="1" [formControl]="moodCtrl"></mat-slider>
   <div fxLayout="column" fxLayoutGap=".25rem" class="has-margin-bottom">
     <div fxLayout="row" fxLayoutAlign="space-between">
-      <mat-icon svgIcon="crying"></mat-icon>
-      <mat-icon svgIcon="sad"></mat-icon>
-      <mat-icon svgIcon="neutral"></mat-icon>
-      <mat-icon svgIcon="happy"></mat-icon>
-      <mat-icon svgIcon="lol"></mat-icon>
+      <button mat-icon-button (click)="setMood(1)"><mat-icon svgIcon="crying"></mat-icon></button>
+      <button mat-icon-button (click)="setMood(2)"><mat-icon svgIcon="sad"></mat-icon></button>
+      <button mat-icon-button (click)="setMood(3)"><mat-icon svgIcon="neutral"></mat-icon></button>
+      <button mat-icon-button (click)="setMood(4)"><mat-icon svgIcon="happy"></mat-icon></button>
+      <button mat-icon-button (click)="setMood(5)"><mat-icon svgIcon="lol"></mat-icon></button>
     </div>
     <div fxLayout="row" fxLayoutAlign="space-between">
       <span i18n>Ganz schlecht</span>
