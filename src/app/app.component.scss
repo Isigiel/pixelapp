@@ -1,0 +1,24 @@
+@import "~@angular/material/theming";
+
+:host{
+  display: block;
+  //background: #F5F5F5;
+  min-height: 100vh;
+}
+mat-toolbar{
+  background: linear-gradient(to right,#00C9FF, #92FE9D);
+  color: #fff;
+  @include mat-elevation(1);
+  &.fixed{
+    position: fixed;
+  }
+  &.spacer{
+    opacity: 0;
+  }
+}
+button[mat-fab]{
+  background: linear-gradient(to right,#75f1b5, #92FE9D);
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+}
