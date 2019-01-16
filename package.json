@@ -7,6 +7,7 @@
     "build": "npm run build:de && npm run build:en",
     "build:de": "ng build --configuration=de",
     "build:en": "ng build --configuration=en",
+    "postbuild": "copyfiles src/_redirects dist/pixelday --flat",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -42,6 +43,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "copyfiles": "^2.1.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.1",
