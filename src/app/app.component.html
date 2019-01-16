@@ -3,8 +3,11 @@
   <button mat-icon-button (click)="showAbout()">
     <mat-icon svgIcon="help"></mat-icon>
   </button>
+  <button mat-icon-button *ngIf="canInstall$ | async" (click)="installApp()">
+    <mat-icon svgIcon="download"></mat-icon>
+  </button>
 </mat-toolbar>
-<button mat-fab (click)="newEntry()" [disabled]="fabDisabled | async">
+<button mat-fab (click)="newEntry()" [disabled]="fabDisabled$ | async">
   <mat-icon svgIcon="add"></mat-icon>
 </button>
 <div fxLayout="column" fxLayoutGap="2rem">
@@ -20,12 +23,12 @@
       </button>
     </div>
   </div>
-  <ng-container *ngIf="yearData | async; else empty">
+  <ng-container *ngIf="yearData$ | async; else empty">
     <div fxLayout="row" fxLayoutAlign="center">
       <div fxFlex="90" fxLayout="column" fxLayoutGap="1rem">
         <p>Hier kannst du sehen, wie {{currentYear}} war.</p>
-        <app-display-year [data]="yearData|async" [year]="displayYear|async"></app-display-year>
-        <p *ngIf="fabDisabled | async">Du kannst morgen wieder deine Stimmung speichern</p>
+        <app-display-year [data]="yearData$|async" [year]="displayYear$|async"></app-display-year>
+        <p *ngIf="fabDisabled$ | async">Du kannst morgen wieder deine Stimmung speichern</p>
       </div>
     </div>
   </ng-container>

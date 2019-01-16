@@ -4,7 +4,16 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatDialogModule, MatIconModule, MatIconRegistry, MatSliderModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatDialogModule,
+  MatIconModule,
+  MatIconRegistry,
+  MatSliderModule,
+  MatSnackBar,
+  MatSnackBarModule,
+  MatToolbarModule
+} from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AboutComponent} from './about/about.component';
@@ -13,6 +22,9 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {DIsplayYearComponent} from './display-year/display-year.component';
 import * as moment from 'moment';
 import 'moment/locale/de';
+import {ServiceWorkerModule, SwUpdate} from '@angular/service-worker';
+import {environment} from '../environments/environment';
+import {InstallPromptService} from './services/install-prompt.service';
 
 @NgModule({
   declarations: [
@@ -31,16 +43,41 @@ import 'moment/locale/de';
     MatButtonModule,
     MatDialogModule,
     MatSliderModule,
+    MatSnackBarModule,
     HttpClientModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
   ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [AboutComponent, NewEntryComponent]
 })
 export class AppModule {
-  constructor(san: DomSanitizer, registry: MatIconRegistry) {
+  constructor(san: DomSanitizer, registry: MatIconRegistry, private updates: SwUpdate,
+              private snackBar: MatSnackBar,
+              private promptService: InstallPromptService) {
     registry.addSvgIconSet(san.bypassSecurityTrustResourceUrl('/assets/icons/set.svg'));
     moment.locale('de');
+
+    window.addEventListener('beforeinstallprompt', e => {
+      // Prevent Chrome 67 and earlier from automatically showing the prompt
+      e.preventDefault();
+      this.promptService.saveEvent(e);
+    });
+    this.updates.available.subscribe(() => {
+      this.snackBar
+        .open(
+          'Eine neue Version dieser Anwendung ist verfuegbar',
+          'Jetzt laden'
+        )
+        .afterDismissed()
+        .subscribe(({dismissedByAction}) => {
+          if (dismissedByAction) {
+            this.updates
+              .activateUpdate()
+              .then(() => document.location.reload());
+          }
+        });
+    });
   }
 }
