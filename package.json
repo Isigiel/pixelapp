@@ -7,7 +7,7 @@
     "build": "npm run build:de && npm run build:en",
     "build:de": "ng build --configuration=de",
     "build:en": "ng build --configuration=en",
-    "postbuild": "copyfiles src/_redirects dist/pixelday --flat",
+    "postbuild": "copyfiles src/_redirects dist/pixelday --flat && copyfiles src/manifest.de.json dist/pixelday/de --flat && copyfiles src/manifest.en.json dist/pixelday/en --flat",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
