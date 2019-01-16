@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatDialogModule, MatIconModule, MatIconRegistry, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatDialogModule, MatIconModule, MatIconRegistry, MatSliderModule, MatToolbarModule} from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AboutComponent} from './about/about.component';
@@ -24,6 +24,7 @@ import { NewEntryComponent } from './new-entry/new-entry.component';
     MatToolbarModule,
     MatButtonModule,
     MatDialogModule,
+    MatSliderModule,
     HttpClientModule,
     FlexLayoutModule
   ],
