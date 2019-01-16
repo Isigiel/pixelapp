@@ -1,10 +1,10 @@
 <mat-toolbar class="dark-theme fixed">
   <span fxFlex>A pixel a day</span>
-  <button mat-icon-button (click)="showAbout()">
-    <mat-icon svgIcon="help"></mat-icon>
-  </button>
   <button mat-icon-button *ngIf="canInstall$ | async" (click)="installApp()">
     <mat-icon svgIcon="download"></mat-icon>
+  </button>
+  <button mat-icon-button (click)="showAbout()">
+    <mat-icon svgIcon="help"></mat-icon>
   </button>
 </mat-toolbar>
 <button mat-fab (click)="newEntry()" [disabled]="fabDisabled$ | async">

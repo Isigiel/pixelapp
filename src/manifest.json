@@ -1,7 +1,7 @@
 {
   "name": "A pixel a Day",
   "short_name": "Pixel a Day",
-  "theme_color": "#1976d2",
+  "theme_color": "#9E9E9E",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
