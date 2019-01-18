@@ -1,7 +1,7 @@
-import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
-import {Year} from '../services/data.service';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Year } from '../services/data.service';
 import * as moment from 'moment';
-import {BehaviorSubject} from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-display-year',
@@ -9,13 +9,11 @@ import {BehaviorSubject} from 'rxjs';
   styleUrls: ['./display-year.component.scss']
 })
 export class DIsplayYearComponent implements OnChanges {
-
   @Input() data: Year;
   @Input() year: number;
   public displayData = new BehaviorSubject([]);
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes);
@@ -29,11 +27,11 @@ export class DIsplayYearComponent implements OnChanges {
           if (dayData) {
             days.push(dayData);
           } else {
-            days.push({mood: 0});
+            days.push({ mood: 0 });
           }
         }
         const month = moment(`${i}-${this.year}`, 'M-Y').format('MMM');
-        months.push({month, days});
+        months.push({ month, days });
       }
       this.displayData.next(months);
     }

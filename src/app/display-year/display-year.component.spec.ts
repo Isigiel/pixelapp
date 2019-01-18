@@ -8,9 +8,8 @@ describe('DIsplayYearComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DIsplayYearComponent ]
-    })
-    .compileComponents();
+      declarations: [DIsplayYearComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

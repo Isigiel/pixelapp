@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-new-entry',
@@ -9,14 +9,11 @@ import {FormControl} from '@angular/forms';
 export class NewEntryComponent implements OnInit {
   moodCtrl = new FormControl(3);
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   setMood(mood: number) {
     this.moodCtrl.setValue(mood);
   }
-
 }

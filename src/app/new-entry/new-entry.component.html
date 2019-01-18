@@ -1,6 +1,6 @@
-<h1 mat-dialog-title i18n class="mat-h1">Neuer Eintrag ✨</h1>
+<h1 class="mat-h1" i18n mat-dialog-title>Neuer Eintrag ✨</h1>
 <div mat-dialog-content class="mat-typography" fxLayout="column">
-  <img src="assets/illustrations/chill.svg" alt="Welcome">
+  <img src="assets/illustrations/chill.svg" alt="Welcome" />
   <!--<h1>Fuer den </h1>-->
   <p i18n>Wie gut hast du dich heute gefuehlt?</p>
   <mat-slider min="1" max="5" step="1" [formControl]="moodCtrl"></mat-slider>
@@ -12,10 +12,7 @@
       <button mat-icon-button (click)="setMood(4)"><mat-icon svgIcon="happy"></mat-icon></button>
       <button mat-icon-button (click)="setMood(5)"><mat-icon svgIcon="lol"></mat-icon></button>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-between">
-      <span i18n>Ganz schlecht</span>
-      <span i18n>Super gut</span>
-    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between"><span i18n>Ganz schlecht</span> <span i18n>Super gut</span></div>
   </div>
 </div>
 <div mat-dialog-actions fxLayout="row" fxLayoutAlign="end" fxLayoutGap=".5rem">
