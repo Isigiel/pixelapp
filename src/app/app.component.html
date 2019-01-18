@@ -1,5 +1,5 @@
-<mat-toolbar class="dark-theme fixed">
-  <span fxFlex>A pixel a day</span>
+<mat-toolbar class="dark-theme fixed mat-typography">
+  <h1 fxFlex>A pixel a day</h1>
   <button mat-icon-button *ngIf="canInstall$ | async" (click)="installApp()">
     <mat-icon svgIcon="download"></mat-icon>
   </button>

@@ -16,6 +16,9 @@ mat-toolbar{
   &.spacer{
     opacity: 0;
   }
+  h1{
+    margin: 0;
+  }
 }
 button[mat-fab]{
   background: linear-gradient(to right,#75f1b5, #92FE9D);

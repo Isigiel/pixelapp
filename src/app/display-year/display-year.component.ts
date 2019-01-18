@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges} from '@angular/core';
+import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {Year} from '../services/data.service';
 import * as moment from 'moment';
 import {BehaviorSubject} from 'rxjs';
@@ -17,22 +17,25 @@ export class DIsplayYearComponent implements OnChanges {
   constructor() {
   }
 
-  ngOnChanges() {
-    const months = [];
-    for (let i = 1; i <= 12; i++) {
-      const days = [];
-      for (let j = 1; j <= moment(`${i}-${this.year}`, 'M-Y').daysInMonth(); j++) {
-        const day = moment(`${j}-${i}-${this.year}`, 'D-M-Y').dayOfYear();
-        const dayData = this.data.days[day];
-        if (dayData) {
-          days.push(dayData);
-        } else {
-          days.push({mood: 0});
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
+    if (changes.data) {
+      const months = [];
+      for (let i = 1; i <= 12; i++) {
+        const days = [];
+        for (let j = 1; j <= moment(`${i}-${this.year}`, 'M-Y').daysInMonth(); j++) {
+          const day = moment(`${j}-${i}-${this.year}`, 'D-M-Y').dayOfYear();
+          const dayData = changes.data.currentValue.days[day];
+          if (dayData) {
+            days.push(dayData);
+          } else {
+            days.push({mood: 0});
+          }
         }
+        const month = moment(`${i}-${this.year}`, 'M-Y').format('MMM');
+        months.push({month, days});
       }
-      const month = moment(`${i}-${this.year}`, 'M-Y').format('MMM');
-      months.push({month, days});
+      this.displayData.next(months);
     }
-    this.displayData.next(months);
   }
 }

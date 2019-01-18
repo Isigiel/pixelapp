@@ -21,11 +21,13 @@ export class DataService {
   }
 
   addDay(year: number, day: number, mood: number) {
-    const newData = this.data.value;
+    const newData = Object.assign({}, this.data.value);
     if (!newData[year]) {
       newData[year] = {days: []};
     }
-    newData[year].days[day] = {mood};
+    const days = [...newData[year].days];
+    days[day] = {mood};
+    newData[year] = {...newData[year], days};
     this.data.next(newData);
   }
 
