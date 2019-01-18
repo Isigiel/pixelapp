@@ -29,7 +29,7 @@
         <source>Warum?</source>
         <target>Why though?</target>
       </trans-unit>
-      <trans-unit id="f6c0387750993212f3d4de4492daf584b47cc2c2">
+      <trans-unit id="b37fba221aa0e6c83b57cd068024b65ca2526749">
         <source>Ich habe von dieser Technik gelesen aber keine App gefunden, die mir gefallen hat. ALso hab ich mich mal hingesetzt und als Uebung selbst eine geschrieben.</source>
         <target>I read about this and didn't find an App I like, so I wrote my own app to exercise.</target>
       </trans-unit>
@@ -37,7 +37,7 @@
         <source>Gibt es das als App?</source>
         <target>How can I get this as an App?</target>
       </trans-unit>
-      <trans-unit id="baf2bbe5f3c2d20c81fdbab632058fed29ef5aaa">
+      <trans-unit id="ce4934fa61ace059b0470b798b1ab6d7b0e6258e">
         <source>Falls dein Handy monderne APps unterstuetzt sollte in der Leiste oben ein download icon sichtbar werden. Damit kannst du die app auf deinem Handy installieren.</source>
         <target>If you device supports modern app, there will be a download button in the top bar.</target>
       </trans-unit>
@@ -73,7 +73,7 @@
         <source>Du kannst morgen wieder deine Stimmung speichern</source>
         <target>You'll have to wait until tomorrow to save your mood again</target>
       </trans-unit>
-      <trans-unit id="3d73730ed258bfff98d4601de0ded2acc33e62f7">
+      <trans-unit id="50370f9b3ab41ad53e7afc67cd51d183c27c7c92">
         <source>Sieht so aus, also ob du noch nichts eingetragen hast. Fuege deinen ersten Tag hinzu!</source>
         <target>Seems like you didn't enter any data yet. Add your first mood of the day!</target>
         <note>Text is displayed if the selected year has no data recorded</note>
