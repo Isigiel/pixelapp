@@ -14,32 +14,32 @@
         <target>Was ist das?</target>
       </trans-unit>
       <trans-unit id="b7eb0a5395e7537f9a04460ca9bc24867e919f7e">
-        <source>Hier kannst du deine Stimmung ueber da Jahr hinweg einfach tracken.</source>
-        <target>Hier kannst du deine Stimmung ueber da Jahr hinweg einfach tracken.</target>
+        <source>Hier kannst du deine Stimmung über das Jahr hinweg einfach tracken.</source>
+        <target>Hier kannst du deine Stimmung über das Jahr hinweg einfach tracken.</target>
       </trans-unit>
       <trans-unit id="96467c7e712cdf0b48c7ea7eb800b4d5febdc529">
         <source>Und meine Daten?</source>
         <target>Und meine Daten?</target>
       </trans-unit>
       <trans-unit id="55c9ae1286d99fcf013630e36b2d61841aefa4d9">
-        <source>Die Daten werden nur auf diesem Gereat gespeichert und nie hochgeladen.</source>
-        <target>Die Daten werden nur auf diesem Gereat gespeichert und nie hochgeladen.</target>
+        <source>Die Daten werden nur auf diesem Gerät gespeichert und nie hochgeladen.</source>
+        <target>Die Daten werden nur auf diesem Gerät gespeichert und nie hochgeladen.</target>
       </trans-unit>
       <trans-unit id="26ef4c1133216490aa650d38a182f910ae2f231a">
         <source>Warum?</source>
         <target>Warum?</target>
       </trans-unit>
       <trans-unit id="f6c0387750993212f3d4de4492daf584b47cc2c2">
-        <source>Ich habe von dieser Technik gelesen aber keine App gefunden, die mir gefallen hat. ALso hab ich mich mal hingesetzt und als Uebung selbst eine geschrieben.</source>
-        <target>Ich habe von dieser Technik gelesen aber keine App gefunden, die mir gefallen hat. ALso hab ich mich mal hingesetzt und als Uebung selbst eine geschrieben.</target>
+        <source>Ich habe von dieser Technik gelesen aber keine App gefunden, die mir gefallen hat. Also hab ich mich mal hingesetzt und als Übung selbst eine geschrieben.</source>
+        <target>Ich habe von dieser Technik gelesen aber keine App gefunden, die mir gefallen hat. Also hab ich mich mal hingesetzt und als Übung selbst eine geschrieben.</target>
       </trans-unit>
       <trans-unit id="db9574dd7c727962a979246b2902630ec7fd2de9">
         <source>Gibt es das als App?</source>
         <target>Gibt es das als App?</target>
       </trans-unit>
       <trans-unit id="baf2bbe5f3c2d20c81fdbab632058fed29ef5aaa">
-        <source>Falls dein Handy monderne APps unterstuetzt sollte in der Leiste oben ein download icon sichtbar werden. Damit kannst du die app auf deinem Handy installieren.</source>
-        <target>Falls dein Handy monderne APps unterstuetzt sollte in der Leiste oben ein download icon sichtbar werden. Damit kannst du die app auf deinem Handy installieren.</target>
+        <source>Falls dein Handy moderne Apps unterstützt sollte in der Leiste oben ein download icon sichtbar werden. Durch einen Klick kannst du die app auf deinem Handy installieren.</source>
+        <target>Falls dein Handy moderne Apps unterstützt sollte in der Leiste oben ein download icon sichtbar werden. Durch einen Klick kannst du die app auf deinem Handy installieren.</target>
       </trans-unit>
       <trans-unit id="6f689efe20b2e1308dc0e3d0aaef6153e04f7abb">
         <source>Alles klar</source>
@@ -50,8 +50,8 @@
         <target>Neuer Eintrag ✨</target>
       </trans-unit>
       <trans-unit id="e55a57e5e24146db415dd2b1e057c05de4914a1a">
-        <source>Wie gut hast du dich heute gefuehlt?</source>
-        <target>Wie gut hast du dich heute gefuehlt?</target>
+        <source>Wie gut hast du dich heute gefühlt?</source>
+        <target>Wie gut hast du dich heute gefühlt?</target>
       </trans-unit>
       <trans-unit id="ae6edb4e69324702f5323524352106f7d33ef9df">
         <source>Ganz schlecht</source>
@@ -74,8 +74,8 @@
         <target>Du kannst morgen wieder deine Stimmung speichern</target>
       </trans-unit>
       <trans-unit id="3d73730ed258bfff98d4601de0ded2acc33e62f7">
-        <source>Sieht so aus, also ob du noch nichts eingetragen hast. Fuege deinen ersten Tag hinzu!</source>
-        <target>Sieht so aus, also ob du noch nichts eingetragen hast. Fuege deinen ersten Tag hinzu!</target>
+        <source>Sieht so aus, also ob du noch nichts eingetragen hast. Füge deinen ersten Tag hinzu, um die Übersicht zu sehen.</source>
+        <target>Sieht so aus, also ob du noch nichts eingetragen hast. Füge deinen ersten Tag hinzu, um die Übersicht zu sehen.</target>
         <note>Text is displayed if the selected year has no data recorded</note>
       </trans-unit>
     </body>
