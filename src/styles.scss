@@ -22,10 +22,32 @@ $pixelday-warn: mat-palette($mat-red);
 $pixelday-theme: mat-light-theme($pixelday-primary, $pixelday-accent, $pixelday-warn);
 $pixelday-dark-theme: mat-dark-theme($pixelday-primary, $pixelday-accent, $pixelday-warn);
 
+$system-stack: '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+
+// Typography config
+$pixelday-typography: mat-typography-config(
+  $font-family:   $system-stack,
+  $display-4:     mat-typography-level(112px, 112px, 300, '"Roboto Slab", serif'),
+  $display-3:     mat-typography-level(56px, 56px, 400, '"Roboto Slab", serif'),
+  $display-2:     mat-typography-level(45px, 48px, 400, '"Roboto Slab", serif'),
+  $display-1:     mat-typography-level(34px, 40px, 400, '"Roboto Slab", serif'),
+  $headline:      mat-typography-level(24px, 32px, 400, '"Roboto Slab", serif'),
+  $title:         mat-typography-level(20px, 32px, 500, '"Roboto Slab", serif'),
+  $subheading-2:  mat-typography-level(16px, 28px, 400),
+  $subheading-1:  mat-typography-level(15px, 24px, 400),
+  $body-2:        mat-typography-level(14px, 24px, 500),
+  $body-1:        mat-typography-level(14px, 20px, 400),
+  $caption:       mat-typography-level(12px, 20px, 400),
+  $button:        mat-typography-level(14px, 14px, 500),
+    // Line-height must be unit-less fraction of the font-size.
+  $input:         mat-typography-level(inherit, 1.125, 400)
+);
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($pixelday-theme);
+@include mat-base-typography($pixelday-typography);
 
 .dark-theme{
   @include angular-material-theme($pixelday-dark-theme);
