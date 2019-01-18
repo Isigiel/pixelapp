@@ -19,6 +19,10 @@ mat-toolbar{
   h1{
     margin: 0;
   }
+  mat-icon{
+    width: 30px;
+    height: 30px;
+  }
 }
 button[mat-fab]{
   background: linear-gradient(to right,#75f1b5, #92FE9D);
