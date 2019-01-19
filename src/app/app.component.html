@@ -19,7 +19,7 @@
   <ng-container *ngIf="(yearData$ | async); else empty">
     <div fxLayout="row" fxLayoutAlign="center">
       <div fxFlex="90" fxLayout="column" fxLayoutGap="1rem">
-        <p>Hier kannst du sehen, wie {{ currentYear }} war.</p>
+        <p i18n>Hier kannst du sehen, wie {{ currentYear }} war.</p>
         <app-display-year [data]="yearData$ | async" [year]="displayYear$ | async"></app-display-year>
         <p *ngIf="(fabDisabled$ | async)" i18n>Du kannst morgen wieder deine Stimmung speichern</p>
       </div>

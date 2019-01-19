@@ -73,6 +73,10 @@
         <source>Du kannst morgen wieder deine Stimmung speichern</source>
         <target>You'll have to wait until tomorrow to save your mood again</target>
       </trans-unit>
+      <trans-unit id="d4b27f3907877ba46e350e5ec809501bce5100d3">
+              <source>Hier kannst du sehen, wie <x id="INTERPOLATION" equiv-text="{{ currentYear }}"/> war.</source>
+              <target>You can see how <x id="INTERPOLATION" equiv-text="{{ currentYear }}"/> was here.</target>
+              </trans-unit>
       <trans-unit id="50370f9b3ab41ad53e7afc67cd51d183c27c7c92">
         <source>Sieht so aus, also ob du noch nichts eingetragen hast. Fuege deinen ersten Tag hinzu!</source>
         <target>Seems like you didn't enter any data yet. Add your first mood of the day!</target>
