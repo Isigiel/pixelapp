@@ -4,11 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm run build:de && npm run build:en",
+    "build": "yarn run build:de && yarn run build:en",
     "build:de": "ng build --configuration=de",
     "build:en": "ng build --configuration=en",
     "postbuild": "node postinstall.js",
     "test": "ng test",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
