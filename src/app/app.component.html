@@ -23,7 +23,7 @@
       <p *ngIf="(fabDisabled$ | async)" i18n>Du kannst morgen wieder deine Stimmung speichern</p>
     </ng-container>
     <ng-template #empty>
-      <img src="assets/illustrations/empty.svg" alt="List is empty" />
+      <div><img src="assets/illustrations/empty.svg" alt="List is empty" /></div>
       <p i18n="Text is displayed if the selected year has no data recorded">
         Sieht so aus, also ob du noch nichts eingetragen hast. Fuege deinen ersten Tag hinzu!
       </p>
