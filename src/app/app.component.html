@@ -1,6 +1,6 @@
 <mat-toolbar class="dark-theme fixed mat-typography" fxLayout="row" fxLayoutAlign="center center">
   <div fxFlex fxLayout="row" fxLayoutGap="1rem" fxLayoutAlign="start center">
-    <mat-icon svgIcon="logo"></mat-icon>
+    <mat-icon class="logo" svgIcon="logo"></mat-icon>
     <h1 fxFlex>A pixel a day</h1>
     <button (click)="installApp()" *ngIf="(canInstall$ | async)" mat-icon-button>
       <mat-icon svgIcon="download"></mat-icon>
