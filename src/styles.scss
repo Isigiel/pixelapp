@@ -1,4 +1,3 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
@@ -12,52 +11,113 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$pixelday-primary: mat-palette($mat-blue);
-$pixelday-accent: mat-palette($mat-teal);
 
+$pixel-red: (
+  50: #ffebee,
+  100: #ff7548,
+  200: #ef9a9a,
+  300: #e57373,
+  400: #ef5350,
+  500: #ff3d1a,
+  600: #e53935,
+  700: #c30000,
+  800: #c62828,
+  900: #b71c1c,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #d50000,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text
+  )
+);
+$pixel-yellow: (
+  50: #fffde7,
+  100: #fff64f,
+  200: #fff59d,
+  300: #fff176,
+  400: #ffee58,
+  500: #ffc400,
+  600: #fdd835,
+  700: #c79400,
+  800: #f9a825,
+  900: #f57f17,
+  A100: #ffff8d,
+  A200: #ffff00,
+  A400: #ffea00,
+  A700: #ffd600,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $dark-primary-text,
+    700: $dark-primary-text,
+    800: $dark-primary-text,
+    900: $dark-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $dark-primary-text
+  )
+);
+$pixelday-primary: mat-palette($pixel-red);
+$pixelday-accent: mat-palette($pixel-yellow);
 // The warn palette is optional (defaults to red).
 $pixelday-warn: mat-palette($mat-red);
-
 // Create the theme object (a Sass map containing all of the palettes).
 $pixelday-theme: mat-light-theme($pixelday-primary, $pixelday-accent, $pixelday-warn);
 $pixelday-dark-theme: mat-dark-theme($pixelday-primary, $pixelday-accent, $pixelday-warn);
-
 $system-stack: '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
-
 // Typography config
 $pixelday-typography: mat-typography-config(
-  $font-family:   $system-stack,
-  $display-4:     mat-typography-level(112px, 112px, 300, '"Roboto Slab", serif'),
-  $display-3:     mat-typography-level(56px, 56px, 400, '"Roboto Slab", serif'),
-  $display-2:     mat-typography-level(45px, 48px, 400, '"Roboto Slab", serif'),
-  $display-1:     mat-typography-level(34px, 40px, 400, '"Roboto Slab", serif'),
-  $headline:      mat-typography-level(24px, 32px, 400, '"Roboto Slab", serif'),
-  $title:         mat-typography-level(20px, 32px, 500, '"Roboto Slab", serif'),
-  $subheading-2:  mat-typography-level(16px, 28px, 400, '"Roboto Slab", serif'),
-  $subheading-1:  mat-typography-level(15px, 24px, 400, '"Roboto Slab", serif'),
-  $body-2:        mat-typography-level(14px, 24px, 500),
-  $body-1:        mat-typography-level(14px, 20px, 400),
-  $caption:       mat-typography-level(12px, 20px, 400),
-  $button:        mat-typography-level(14px, 14px, 500),
-    // Line-height must be unit-less fraction of the font-size.
-  $input:         mat-typography-level(inherit, 1.125, 400)
+  $font-family: $system-stack,
+  $display-4: mat-typography-level(112px, 112px, 300, '"Roboto Slab", serif'),
+  $display-3: mat-typography-level(56px, 56px, 400, '"Roboto Slab", serif'),
+  $display-2: mat-typography-level(45px, 48px, 400, '"Roboto Slab", serif'),
+  $display-1: mat-typography-level(34px, 40px, 400, '"Roboto Slab", serif'),
+  $headline: mat-typography-level(24px, 32px, 400, '"Roboto Slab", serif'),
+  $title: mat-typography-level(20px, 32px, 500, '"Roboto Slab", serif'),
+  $subheading-2: mat-typography-level(16px, 28px, 400, '"Roboto Slab", serif'),
+  $subheading-1: mat-typography-level(15px, 24px, 400, '"Roboto Slab", serif'),
+  $body-2: mat-typography-level(14px, 24px, 500),
+  $body-1: mat-typography-level(14px, 20px, 400),
+  $caption: mat-typography-level(12px, 20px, 400),
+  $button: mat-typography-level(14px, 14px, 500),
+  $input: mat-typography-level(inherit, 1.125, 400)
 );
-
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($pixelday-theme);
 @include mat-base-typography($pixelday-typography);
-
-.dark-theme{
+.dark-theme {
   @include angular-material-theme($pixelday-dark-theme);
 }
-
 /* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.has-margin-bottom{
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+.has-margin-bottom {
   margin-bottom: 1rem;
 }

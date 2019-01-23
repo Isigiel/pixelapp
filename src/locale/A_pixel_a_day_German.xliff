@@ -73,6 +73,10 @@
         <source>Du kannst morgen wieder deine Stimmung speichern</source>
         <target>Du kannst morgen wieder deine Stimmung speichern</target>
       </trans-unit>
+      <trans-unit id="d4b27f3907877ba46e350e5ec809501bce5100d3">
+                    <source>Hier kannst du sehen, wie <x id="INTERPOLATION" equiv-text="{{ currentYear }}"/> war.</source>
+                    <target>Hier kannst du sehen, wie <x id="INTERPOLATION" equiv-text="{{ currentYear }}"/> war.</target>
+                    </trans-unit>
       <trans-unit id="50370f9b3ab41ad53e7afc67cd51d183c27c7c92">
         <source>Sieht so aus, also ob du noch nichts eingetragen hast. Füge deinen ersten Tag hinzu, um die Übersicht zu sehen.</source>
         <target>Sieht so aus, also ob du noch nichts eingetragen hast. Füge deinen ersten Tag hinzu, um die Übersicht zu sehen.</target>

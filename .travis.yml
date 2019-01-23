@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - 'node'
+cache: yarn
+branches:
+  only:
+    - develop
+script:
+  - yarn run lint
+  - yarn run test:ci
+  - yarn run build
